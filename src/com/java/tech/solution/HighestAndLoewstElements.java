@@ -38,6 +38,16 @@ public class HighestAndLoewstElements {
 		System.out.println(max2);
 		int min2 = list.stream().min((x, y) -> x.compareTo(y)).get();
 		System.out.println(min2);
+		
+		int max3= list.stream().sorted((x,y) -> y.compareTo(x)).findFirst().get();
+		System.out.println("Max3 ->"+max3);
+		int min3= list.stream().sorted((x,y) -> x.compareTo(y)).findFirst().get();
+		System.out.println("Min3 ->"+min3);
+		
+		int max4= list.stream().sorted((x,y) -> Integer.compare(y, x)).findFirst().get();
+		System.out.println("Max4 ->"+max4);
+		int min4= list.stream().sorted((x,y) -> Integer.compare(x, y)).findFirst().get();
+		System.out.println("Min4 ->"+min4);
 	}
 
 }
