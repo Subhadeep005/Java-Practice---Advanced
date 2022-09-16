@@ -1,4 +1,4 @@
-package com.java.tech.solution;
+package com.java.tech.string.program;
 
 import java.util.Arrays;
 import java.util.Collection;

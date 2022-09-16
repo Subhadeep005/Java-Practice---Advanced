@@ -1,4 +1,4 @@
-package com.java.tech.solution;
+package com.java.tech.string.program;
 
 public class ReverseString {
 

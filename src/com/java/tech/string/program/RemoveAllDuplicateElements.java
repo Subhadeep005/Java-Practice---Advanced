@@ -1,6 +1,8 @@
 package com.java.tech.string.program;
 
+import java.util.Arrays;
 import java.util.HashSet;
+import java.util.stream.Collectors;
 
 public class RemoveAllDuplicateElements {
 
@@ -18,9 +20,17 @@ public class RemoveAllDuplicateElements {
 	            System.out.print(x);
 	}
 	
+public static void removeDuplicate1(String str) {
+		System.out.println();
+		HashSet<String> hashSet = new HashSet<>();
+		
+		Arrays.stream(str.split("")).filter(x -> hashSet.add(x)).collect(Collectors.toSet()).forEach(System.out::print);
+	}
+	
 	public static void main(String[] args) {
 		String str= "geeksforgeeks";
 		removeDuplicate(str);
+		removeDuplicate1(str);
 	}
 
 }
