@@ -18,7 +18,7 @@ public class FindNoOfOccuranceOfElements {
 		HowManyElementsInString.elementCount(str);
 		HowManyElementsInString.elementCount1(str);
 		HowManyElementsInString.elementCount2(str);
-		// HowManyElementsInString.elementCount3(str);
+		HowManyElementsInString.elementCount3(str);
 	}
 }
 
@@ -62,12 +62,24 @@ class HowManyElementsInString {
 
 		Arrays.asList(str).forEach(i -> System.out.println(i));
 		Map<String, Long> result = Arrays.stream(str.split("")).filter(x -> !(x.equalsIgnoreCase(" ")))
-				.collect(Collectors.groupingBy(s -> s, LinkedHashMap::new, Collectors.counting()));
+				.collect(Collectors.groupingBy(s -> s, HashMap::new, Collectors.counting()));
+		result.forEach((k, v) -> System.out.println(k + "->" + v));
+	}
+
+	public static void elementCount3(String str) {
+
+		Arrays.asList(str).forEach(i -> System.out.println(i));
+		char arr[] = str.toCharArray();
+		Map<Character, Integer> result = new HashMap<>();
+		for (char c : arr) {
+			if (c != ' ')
+				result.put(c, result.getOrDefault(c, 0) + 1);
+		}
 		result.forEach((k, v) -> System.out.println(k + "->" + v));
 	}
 
 	/*
-	 * public static void elementCount3(String str) {
+	 * public static void elementCount4(String str) {
 	 * 
 	 * Arrays.asList(str).forEach(i -> System.out.println(i));
 	 * Pattern.compile(".").matcher(str).results().map(m -> m.group().toLowerCase())
