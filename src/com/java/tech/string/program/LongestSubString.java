@@ -2,6 +2,7 @@ package com.java.tech.string.program;
 
 public class LongestSubString {
 
+	@SuppressWarnings("static-access")
 	public static int longestUniqueSubsttr(String str) {
 		int maxLength = 0;
 		String st = "";
@@ -15,8 +16,8 @@ public class LongestSubString {
 
 			for (char ch : str.toCharArray()) {
 				if (st.contains(str.valueOf(ch))) {
-					st = st.substring(str.indexOf(ch) + 1);
-				}
+					st =  st.substring(str.indexOf(ch) + 1);
+				} 
 				st = st + str.valueOf(ch);
 				maxLength = Math.max(st.length(), maxLength);
 			}

@@ -40,7 +40,7 @@ public class MostFrequentElementsK {
 
 	public static void main(String[] args) {
 		int[] input = { 1, 1, 1, 1, 1, 4, 4, 4, 4, 2, 2, 2, 2, 3, 3, 3, 5, 5, 5, 5, 5 }; int k=3;
-		System.out.println("The MostFrequentElementsK : " + Arrays.toString(topKFrequent(input, k)));
+		System.out.println("The MostFrequentElements is : " + Arrays.toString(topKFrequent(input, k)));
 	}
 
 }

@@ -43,6 +43,12 @@ public class SecondHighestInArray {
 		
 		// Printing list after sorting
 		//list.stream().sorted().collect(Collectors.toList()).forEach(System.out::println);
+		
+		list.stream().sorted((x,y) -> Integer.compare(x, y)).collect(Collectors.toList()).forEach(System.out::println);
+		list.stream().sorted(Integer :: compare).collect(Collectors.toList()).forEach(System.out::println);
+		
+		list.stream().sorted((x,y) -> x.compareTo(y)).collect(Collectors.toList()).forEach(System.out::println);
+		list.stream().sorted(Integer :: compareTo).collect(Collectors.toList()).forEach(System.out::println);
 
 	}
 

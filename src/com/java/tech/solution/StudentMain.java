@@ -40,7 +40,7 @@ public class StudentMain {
 		studentList.stream().filter(x -> x.getMarks() > 80).collect(Collectors.toList());
 		// Group by departments
 		Map<String, List<Student>> map = studentList.stream().collect(Collectors.groupingBy(p -> p.getDepartment()));
-		map.forEach((k, v) -> System.out.println(k + "," + v));
+		map.forEach((k, v) -> System.out.println("Group by departments : "+k + "," + v));
 		//studentList.stream().collect(Collectors.groupingBy(p -> p.getDepartment())).forEach((k, v) -> System.out.println(k + "," + v));
 
 		// System.out.println(studentList.stream().collect(Collectors.groupingBy(p ->
